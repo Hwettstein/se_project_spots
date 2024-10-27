@@ -10,9 +10,16 @@ This is the third project of the Software Engineering program at TripleTen. It w
 - Positioning
 - Flat BEM file structure
 - A custom form
+- Hover states
 - Compatibility and flexability with different sized screens
 
-## Plan on improving the project
+## Plans on improving the project
 
-- Animations and hover effecrs
+- Animations and hover effects
 - Custom buttons and text entry
+
+## Images
+
+![screenshot](./images/card-button-media-query.png)
+![screenshot](./images/font-face-imports.png)
+![screenshot](./images/profile-media-query.png)

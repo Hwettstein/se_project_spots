@@ -9,6 +9,7 @@
   height: 190px;
   width: 190px;
   margin-right: 20px;
+  object-fit: cover;
 }
 
 .profile__column {
@@ -45,8 +46,15 @@
   height: 16px;
   margin: 0;
   padding: 114px 0 0;
+  opacity: 70%;
   background: none;
   border: 0;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+
+.profile__edit-button:hover {
+  opacity: 100%;
 }
 
 .profile__add-button {
@@ -58,6 +66,12 @@
   color: #fcf5e5;
   margin-left: auto;
   background-color: #212121;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+
+.profile__add-button:hover {
+  opacity: 80%;
 }
 
 @media screen and (max-width: 627px) {
