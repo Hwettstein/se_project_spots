@@ -18,8 +18,15 @@ This is the third project of the Software Engineering program at TripleTen. It w
 - Animations and hover effects
 - Custom buttons and text entry
 
+## Video overview of HTML and CSS
+
+https://drive.google.com/file/d/1RGZ0pifKQswcrN_SVzq451bOQ-TgCbu3/view?usp=sharing
+
 ## Images
 
-![screenshot](./images/card-button-media-query.png)
-![screenshot](./images/font-face-imports.png)
-![screenshot](./images/profile-media-query.png)
+- .card like-button code and media queries for .card
+  ![screenshot](./images/card-button-media-query.png)
+- font-face import code for different font-weights
+  ![screenshot](./images/font-face-imports.png)
+- media query for profile blocks/elements to be used on smaller screens
+  ![screenshot](./images/profile-media-query.png)
