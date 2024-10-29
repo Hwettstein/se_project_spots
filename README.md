@@ -1,3 +1,5 @@
+https://hwettstein.github.io/se_project_spots/
+
 # Spots
 
 This is the third project of the Software Engineering program at TripleTen. It was created using HTML and CSS, based on the design brief in Figma.
