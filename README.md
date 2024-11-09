@@ -14,6 +14,8 @@ This is the third project of the Software Engineering program at TripleTen. It w
 - A custom form
 - Hover states
 - Compatibility and flexability with different sized screens
+- A modal to edit and submut individual profile information
+- Cards are contained in an array using JavaScript instead of being hard coded into the HTML
 
 ## Plans on improving the project
 
@@ -30,5 +32,9 @@ https://drive.google.com/file/d/1RGZ0pifKQswcrN_SVzq451bOQ-TgCbu3/view?usp=shari
   ![screenshot](./images/card-button-media-query.png)
 - font-face import code for different font-weights
   ![screenshot](./images/font-face-imports.png)
-- media query for profile blocks/elements to be used on smaller screens
+- Media query for profile blocks/elements to be used on smaller screens
   ![screenshot](./images/profile-media-query.png)
+- Working modal for editing profile information
+  ![screenshot](./images/profile-editor-blank.png)
+  ![screenshot](./images/profile-editor-completed.png)
+  ![screenshot](./images/profile-editor-submitted.png)
