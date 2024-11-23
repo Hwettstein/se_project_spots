@@ -30,7 +30,7 @@
               Profile
             </button>
           </div>
-          <button type="button" class="profile__add-button">
+          <button type="button" class="card__add-btn">
             <img src="./images/plus.svg" alt="plus icon" />New Post
           </button>
         </section>
@@ -42,7 +42,8 @@
                 <div class="card__content">
                   <h2 class="card__title"></h2>
                   <button type="button" class="card__like-button"></button>
-                </div></li
+                </div>
+                <button type="button" class="card__delete-button"></button></li
             ></template>
           </ul>
         </section>
@@ -76,6 +77,45 @@
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
+      </div>
+      <div class="modal" id="card-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn"></button>
+          <h2 class="modal__title">New post</h2>
+          <form id="add-card-form" class="modal__form">
+            <label for="add-card-link" class="modal__label">
+              Image link
+              <input
+                id="add-card-link"
+                type="url"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+                name="link"
+              />
+            </label>
+            <label for="add-card-name" class="modal__label">
+              Caption
+              <input
+                id="add-card-name"
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
+                name="name"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="preview-image">
+      <div class="modal__container modal__container_type_preview">
+        <button
+          type="button"
+          class="modal__close-btn modal__close-btn_preview"
+        ></button>
+        <img class="modal__image" src="" alt="#alt_text" />
+        <p class="modal__desc"></p>
       </div>
     </div>
     <script defer src="./scripts/index.js"></script>

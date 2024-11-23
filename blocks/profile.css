@@ -56,7 +56,7 @@
   opacity: 70%;
   background: none;
   border: 0;
-  cursor: pointer;
+  cursor: url("../images/pointer.png"), auto;
   transition: opacity 0.5s;
 }
 
@@ -64,7 +64,7 @@
   opacity: 100%;
 }
 
-.profile__add-button {
+.card__add-btn {
   border-radius: 10px;
   width: 149px;
   height: 52px;
@@ -77,11 +77,11 @@
   color: #fcf5e5;
   margin-left: auto;
   background-color: #212121;
-  cursor: pointer;
+  cursor: url("../images/pointer.png"), auto;
   transition: opacity 0.5s;
 }
 
-.profile__add-button:hover {
+.card__add-btn:hover {
   opacity: 80%;
 }
 
@@ -129,7 +129,7 @@
     opacity: 70%;
   }
 
-  .profile__add-button {
+  .card__add-btn {
     margin-left: 0;
     max-width: 288px;
     width: 100%;
