@@ -48,6 +48,7 @@
 
 .card__like-button_liked {
   background-image: url(../images/liked.svg);
+  background-color: transparent;
   opacity: 100%;
   transition: 0.2s;
 }
