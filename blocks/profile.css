@@ -64,7 +64,7 @@
   opacity: 100%;
 }
 
-.card__add-btn {
+.profile__add-card {
   border-radius: 10px;
   width: 149px;
   height: 52px;
@@ -81,7 +81,7 @@
   transition: opacity 0.5s;
 }
 
-.card__add-btn:hover {
+.profile__add-card-btn:hover {
   opacity: 80%;
 }
 
@@ -129,7 +129,7 @@
     opacity: 70%;
   }
 
-  .card__add-btn {
+  .profile__add-card {
     margin-left: 0;
     max-width: 288px;
     width: 100%;

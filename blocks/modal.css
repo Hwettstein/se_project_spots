@@ -61,6 +61,7 @@
   max-width: max-content;
   text-align: left;
   color: #ffff;
+  font: Poppins;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -151,6 +152,10 @@
 }
 
 @media screen and (max-width: 627px) {
+  .modal {
+    padding: 10px;
+  }
+
   .modal__container {
     padding: 12px;
   }
@@ -160,23 +165,20 @@
     margin: 10px 0 34px;
   }
 
-  .modal__image {
-    border-radius: 4px;
-  }
-
   .modal__input {
+    max-width: 276px;
     font-size: 16px;
-    right: 0px;
   }
 
   .modal__close-btn {
     top: 12px;
-    right: 12px;
+    left: 12px;
   }
 
-  .modal__close-btn_type_preview {
-    top: -32px;
-    right: 3px;
+  .modal__close-btn_preview {
+    position: relative;
+    top: 8px;
+    left: 248px;
   }
 
   .modal__label {
@@ -189,5 +191,13 @@
 
   .modal__submit-btn {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .modal__image {
+    width: 288px;
+    max-width: unset;
+    object-fit: contain;
   }
 }
