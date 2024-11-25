@@ -13,6 +13,7 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 .modal_opened {
@@ -61,7 +62,6 @@
   max-width: max-content;
   text-align: left;
   color: #ffff;
-  font: Poppins;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -171,8 +171,8 @@
   }
 
   .modal__close-btn {
-    top: 12px;
-    left: 12px;
+    top: 18px;
+    left: 248px;
   }
 
   .modal__close-btn_preview {
@@ -187,6 +187,7 @@
 
   .modal__desc {
     font-size: 16px;
+    line-height: 19.2px;
   }
 
   .modal__submit-btn {

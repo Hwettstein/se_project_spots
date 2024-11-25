@@ -81,7 +81,7 @@
   transition: opacity 0.5s;
 }
 
-.profile__add-card-btn:hover {
+.profile__add-card:hover {
   opacity: 80%;
 }
 
