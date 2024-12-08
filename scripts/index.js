@@ -110,6 +110,7 @@ document.addEventListener("click", (event) => {
   const openModal = document.querySelector(".modal_opened");
   if (
     openModal &&
+    openModal.querySelector(".modal_content") &&
     !openModal.querySelector(".modal_content").contains(event.target)
   ) {
     closeModal(openModal);
