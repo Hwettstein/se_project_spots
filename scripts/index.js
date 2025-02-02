@@ -1,3 +1,5 @@
+import { enableValidation, settings, resetValidation } from "./validation.js";
+
 const initialCards = [
   {
     name: "Griffin Wooldridge",
@@ -157,6 +159,7 @@ profileEditBtn.addEventListener("click", () => {
   );
   openModal(editModal);
 });
+
 editModalCloseBtn.addEventListener("click", () => {
   closeModal(editModal);
 });
@@ -178,3 +181,5 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardList.prepend(cardElement);
 });
+
+enableValidation(settings);
