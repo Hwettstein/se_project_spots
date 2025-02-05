@@ -155,11 +155,6 @@ function handleEditFormSubmit(evt) {
   profileDescription.textContent = editModalDescriptionInput.value;
   closeModal(editModal);
   editFormElement.reset();
-  resetValidation(
-    editFormElement,
-    [editModalNameInput, editModalDescriptionInput],
-    settings
-  );
   disableButton(editModalSubmitBtn, settings);
 }
 
@@ -173,7 +168,6 @@ function handleCardSubmit(evt) {
   cardList.prepend(cardElement);
   closeModal(cardModal);
   cardForm.reset();
-  resetValidation(cardForm, [cardNameInput, cardLinkInput], settings);
   disableButton(cardSubmitBtn, settings);
 }
 
