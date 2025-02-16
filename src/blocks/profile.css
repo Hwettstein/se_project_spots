@@ -6,9 +6,14 @@
 
 .profile__avatar-container {
   position: relative;
+  max-width: 190px;
+  max-height: 190px;
+  margin: 0;
+  padding-right: 20px;
 }
 
 .profile__avatar-btn {
+  margin: 0;
   position: absolute;
   background: none;
   width: 100%;
@@ -19,6 +24,11 @@
   visibility: hidden;
   cursor: pointer;
   border: none;
+  padding-bottom: 12px;
+  padding-left: 39px;
+  padding-right: 60px;
+  color: #ffffff;
+  font: Poppins;
 }
 
 .profile__avatar-container:hover .profile__avatar-btn {
@@ -123,6 +133,21 @@
     margin: 0 0 12px;
     height: 80px;
     width: 80px;
+  }
+
+  .profile__avatar-container {
+    padding: 0;
+  }
+
+  .profile__avatar-container:hover .profile__avatar-btn {
+    visibility: visible;
+  }
+
+  .profile__avatar-btn::after {
+    position: absolute;
+    content: url(../images/avatar-edit-mini.png);
+    padding-bottom: 4.66px;
+    padding-left: 45px;
   }
 
   .profile__name {
