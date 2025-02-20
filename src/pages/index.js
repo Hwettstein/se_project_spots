@@ -3,47 +3,10 @@ import {
   enableValidation,
   settings,
   resetValidation,
+  disableButton,
 } from "../scripts/validation.js";
 import Api from "../utils/Api.js";
 import { setButtonText } from "../utils/helpers.js";
-
-// const initialCards = [
-//   {
-//     name: "Griffin Wooldridge",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
-//     altText: "Red Bridge",
-//   },
-//   {
-//     name: "Val Thorens",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
-//     altText: "Snowy cabin",
-//   },
-//   {
-//     name: "Restaurant terrace",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
-//     altText: "Sunny tunnel",
-//   },
-//   {
-//     name: "An outdoor cafe",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
-//     altText: "Bridge over forest",
-//   },
-//   {
-//     name: "A very long bridge, over the forest and through the trees",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
-//     altText: "Cafe tables with customers",
-//   },
-//   {
-//     name: "Tunnel with morning light",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg",
-//     altText: "Resturant facade",
-//   },
-//   {
-//     name: "Mountain house",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
-//     altText: "Mountain viewed through a window",
-//   },
-// ];
 
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
@@ -69,6 +32,7 @@ api
   })
   .catch((err) => console.error("Failed to load app data:", err));
 
+const closeButtons = document.querySelectorAll(".modal__close-btn");
 const profileEditBtn = document.querySelector(".profile__edit-btn");
 const cardModalBtn = document.querySelector(".profile__add-card");
 const avatarModalBtn = document.querySelector(".profile__avatar-btn");
@@ -93,11 +57,13 @@ const cardLinkInput = cardModal.querySelector("#add-card-link");
 const cardNameInput = cardModal.querySelector("#add-card-name");
 
 const deleteModal = document.querySelector("#delete-modal");
-const deleteModalCloseBtn = document.querySelector(".modal__close-btn-delete");
-const deleteModalCancelBtn = document.querySelector(
+const deleteModalCloseBtn = deleteModal.querySelector(
+  ".modal__close-btn-delete"
+);
+const deleteModalCancelBtn = deleteModal.querySelector(
   ".modal__submit-btn_cancel"
 );
-const deleteForm = deleteModal.querySelector(".modal__form");
+const deleteForm = document.forms["delete-form"];
 
 const previewModal = document.querySelector("#preview-image");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
@@ -195,10 +161,6 @@ function handleDeleteCard(cardElement, cardId) {
   openModal(deleteModal);
 }
 
-function disableButton(button, settings) {
-  button.disabled = true;
-}
-
 function handleEscKeyPress(evt) {
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_opened");
@@ -293,32 +255,15 @@ profileEditBtn.addEventListener("click", () => {
   openModal(editModal);
 });
 
-editModalCloseBtn.addEventListener("click", () => {
-  closeModal(editModal);
-});
-
-deleteModalCloseBtn.addEventListener("click", () => {
-  closeModal(deleteModal);
-});
-
 cardModalBtn.addEventListener("click", () => {
   openModal(cardModal);
 });
 
-cardModalCloseBtn.addEventListener("click", () => {
-  closeModal(cardModal);
-});
-
-deleteModalCloseBtn.addEventListener("click", () => {
-  closeModal(deleteModal);
-});
-
-previewModalCloseBtn.addEventListener("click", () => {
-  closeModal(previewModal);
-});
-
-deleteModalCancelBtn.addEventListener("click", () => {
-  closeModal(deleteModal);
+closeButtons.forEach((button) => {
+  button.addEventListener("click", (evt) => {
+    const modal = evt.target.closest(".modal");
+    closeModal(modal);
+  });
 });
 
 avatarForm.addEventListener("submit", handleAvatarSubmit);

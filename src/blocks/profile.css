@@ -28,7 +28,7 @@
   padding-left: 39px;
   padding-right: 60px;
   color: #ffffff;
-  font: Poppins;
+  font-family: Poppins;
 }
 
 .profile__avatar-container:hover .profile__avatar-btn {
@@ -145,9 +145,8 @@
 
   .profile__avatar-btn::after {
     position: absolute;
+    visibility: hidden;
     content: url(../images/avatar-edit-mini.png);
-    padding-bottom: 4.66px;
-    padding-left: 45px;
   }
 
   .profile__name {
