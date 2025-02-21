@@ -266,12 +266,13 @@ closeButtons.forEach((button) => {
   });
 });
 
+deleteModalCancelBtn.addEventListener("click", () => {
+  closeModal(deleteModal);
+});
+
 avatarForm.addEventListener("submit", handleAvatarSubmit);
 avatarModalBtn.addEventListener("click", () => {
   openModal(avatarModal);
-});
-avatarModalCloseBtn.addEventListener("click", () => {
-  closeModal(avatarModal);
 });
 
 deleteForm.addEventListener("submit", handleDeleteSubmit);
